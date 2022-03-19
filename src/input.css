@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section {
+    margin: auto;
+  }
+
+  /* unused */
+  section.inner {
+    min-width: 1440px;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 120%;
+  }
+
+  @media (min-width: 993px) {
+    h1 {
+      font-size: 48px;
+    }
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 120%;
+  }
+
+  @media (min-width: 993px) {
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  @media (min-width: 993px) {
+    h3 {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}
+
+@layer components {
+  .inner-section {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .poppins {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .inter {
+    font-family: "Inter", sans-serif;
+  }
+
+  .jakarta {
+    font-family: 'Plus Jakarta Display', sans-serif;
+  }
+
+  .button-main {
+    align-items: center;
+    padding: 12px 20px;
+    background: #CE3252;
+    border-radius: 10px;
+  }
+
+  .button-outline {
+    align-items: center;
+    border: 1px solid #CE3252;
+    border-radius: 10px;
+  }
+
+  .border-resume {
+    background: radial-gradient(224.54% 251.03% at 40.62% -86.81%,
+        #768299 0%,
+        rgba(118, 130, 153, 0) 100%);
+    box-shadow: 0px 83px 96px -43px #0a0a1580;
+  }
+
+  .round {
+    background: radial-gradient(224.54% 251.03% at 40.62% -86.81%,
+        #768299 0%,
+        rgba(118, 130, 153, 0) 100%);
+  }
+
+  .acute {
+    background: radial-gradient(224.54% 251.03% at 40.62% -86.81%,
+        #768299 0%,
+        rgba(118, 130, 153, 0) 100%);
+  }
+
+  .left {
+    background: linear-gradient(90deg,
+        #232a34 18.62%,
+        rgba(15, 15, 28, 0) 108.81%);
+  }
+
+  .right {
+    background: linear-gradient(270deg,
+        #232a34 18.62%,
+        rgba(15, 15, 28, 0) 92.82%);
+  }
+
+  .ln-hg-24 {
+    line-height: 1.5rem;
+  }
+
+  .ln-hg-28 {
+    line-height: 1.75rem;
+  }
+
+}
