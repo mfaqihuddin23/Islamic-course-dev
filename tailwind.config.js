@@ -37,17 +37,13 @@ module.exports = {
         third: "#6F585B",
         gray: "#C4C4C4",
         gray2: "#3C64B140",
-
-
+        gray3: "#CCD2E3",
+        gray4: "#DFDFDF",
+        gray5: "#626263",
       },
-      boxShadow: {
-        'left': 'inset 30px 1px 65px -7px #151C25',
-        'right': 'inset -30px 1px 65px -7px #151C25',
-      },
-      width: {
-        '25': '6.375rem',
-        '43rem': "43.75rem",
-        '300': "390px"
+      
+      height: {
+        '240': '240px',
       }
     },
   },

@@ -79,7 +79,7 @@
                 x-transition:leave="transition-all ease-in duration-75" x-transition:leave-start="transform-all right-0"
                 x-transition:leave-end="transform-all -right-80" class="fixed z-50 top-0 right-0 flex w-full h-screen">
                 <div
-                  class="grid gap-12 content-start w-4/5 bg-maroon px-8 pt-7 md:pt-7 pb-4 overflow-y-scroll h-screen">
+                  class="grid gap-12 content-start w-3/5 bg-maroon px-8 pt-7 md:pt-7 pb-4 overflow-y-scroll h-screen">
                   <div class="flex justify-between">
                     <img src="assets/img/logo/logo.svg" style="width: 150px" alt="GSD-logo" />
                     <button @click="open = !open">
@@ -132,18 +132,44 @@
     </div>
   </section>
   <!-- discover section -->
-  <section id="how-it-works">
-    <div class="container flex flex-col pt-16 pb-20  gap-16 lg:gap-8 justify-items-center text-center">
+  <section id="discover">
+    <div class="lg:container flex flex-col pt-16 pb-20  gap-16 lg:gap-8 justify-items-center text-center">
       <h1 class="text-maroon">Discover Deep Knowledge </h1>
-      <ul class="flex space-x-14 text-center justify-center text-gray2 font-bold">
+      <ul class="grid grid-flow-col w-full space-x-14 text-center text-gray2 font-bold">
         <li class="text-black underline decoration-ruby decoration-2 underline-offset-4"><a href="#">All
             catagories</a></li>
-        <li><a href="#"></a>History</li>
-        <li><a href="#"></a>Hadith</li>
-        <li><a href="#"></a>Al-quran</li>
-        <li><a href="#"></a>Art</li>
-        <li><a href="#"></a>Poetry</li>
-        <li><a href="#"></a>Culture</li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Hadith</a></li>
+        <li><a href="#">Al-quran</a></li>
+        <li><a href="#">Art</a></li>
+        <li><a href="#">Poetry</a></li>
+        <li><a href="#">Culture</a></li>
+      </ul>
+      <ul class="flex space-x-14 justify-center overflow-x-auto lg:overflow-visible">
+        <a href="#">
+          <li class="box-discover grid"><img src="./assets/img/avatar/syaikh-1.png" alt="syaikh-1">
+            <p class="text-lg font-semibold text-ruby">Fiqh</p>
+            <p class="text-sm text-gray3">Zakaria Faris</p>
+          </li>
+        </a>
+        <a href="#">
+          <li class="box-discover grid"><img src="./assets/img/avatar/syaikh-2.png" alt="syaikh-2">
+            <p class="text-lg font-semibold text-ruby">Hadith</p>
+            <p class="text-sm text-gray3">Zakaria Faris</p>
+          </li>
+        </a>
+        <a href="#">
+          <li class="box-discover grid"><img src="./assets/img/avatar/syaikh-3.png" alt="syaikh-3">
+            <p class="text-lg font-semibold text-ruby">Quran</p>
+            <p class="text-sm text-gray3">Zakaria Faris</p>
+          </li>
+        </a>
+        <a href="#">
+          <li class="box-discover grid"><img src="./assets/img/avatar/syaikh-4.png" alt="syaikh-4">
+            <p class="text-lg font-semibold text-ruby">History</p>
+            <p class="text-sm text-gray3">Zakaria Faris</p>
+          </li>
+        </a>
       </ul>
     </div>
   </section>
@@ -157,72 +183,267 @@
   <!-- most popular section -->
   <section id="most-popular">
     <div class="container flex flex-col pt-16 pb-20 gap-16 lg:gap-8 justify-items-center">
+      <img class="absolute inset-x-0 mx-auto -z-10" src="./assets/img/ornament/ribbon-1.svg" alt="ribbon-1">
       <h1 class="text-third">Most Popular</h1>
+      <ul class="flex space-x-14 justify-center overflow-x-auto lg:overflow-visible">
+        <li id="popular-card" class="box-popular grid">
+          <div id="popular-avatar" class="relative text-white" style="width: 371px; height: 291px;">
+            <div class="absolute">
+              <p class="p-4 text-2xl font-bold">Best Seller</p>
+            </div>
+            <div class="p-4 absolute z-20 bottom-0">
+              <div class="flex items-center space-x-2">
+                <span>4.7</span> <img src="./assets/img/icon/stars.png" style="height:fit-content" alt="stars">
+              </div>
+              <p>(161.537)</p>
+            </div>
+            <img class="absolute z-10 bottom-0" src="./assets/img/avatar/avatar-footer.png" alt="avatar-footer">
+            <img src="./assets/img/avatar/oughtea-1.png" alt="oughtea-1">
+          </div>
+          <div id="popular-price" class="relative p-5" style="height: 193px">
+            <p class="font-bold text-black">Qur'an and Hadith studies.</p>
+            <div class="absolute bottom-5 left-5">
+              <p class="text-sm font-medium text-gray mb-3">Dr. ahmad hamid</p>
+              <p class="text-lg font-light text-gray4 line-through">$ 300,00</p>
+              <p class="text-2xl font-bold text-ruby">Fiqh</p>
+            </div>
+            <button class="button-main absolute bottom-5 right-5 flex font-semibold space-x-2"><img
+                src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
+        </li>
+        <li id="popular-card" class="box-popular grid">
+          <div id="popular-avatar" class="relative text-white" style="width: 371px; height: 291px;">
+            <div class="absolute">
+              <p class="p-4 text-2xl font-bold">Best Seller</p>
+            </div>
+            <div class="p-4 absolute z-20 bottom-0">
+              <div class="flex items-center space-x-2">
+                <span>4.7</span> <img src="./assets/img/icon/stars.png" style="height:fit-content" alt="stars">
+              </div>
+              <p>(161.537)</p>
+            </div>
+            <img class="absolute z-10 bottom-0" src="./assets/img/avatar/avatar-footer.png" alt="avatar-footer">
+            <img src="./assets/img/avatar/oughtea-2.png" alt="oughtea-2">
+          </div>
+          <div id="popular-price" class="relative p-5" style="height: 193px">
+            <p class="font-bold text-black">Qur'an and Hadith studies.</p>
+            <div class="absolute bottom-5 left-5">
+              <p class="text-sm font-medium text-gray mb-3">Dr. ahmad hamid</p>
+              <p class="text-lg font-light text-gray4 line-through">$ 300,00</p>
+              <p class="text-2xl font-bold text-ruby">Fiqh</p>
+            </div>
+            <button class="button-main absolute bottom-5 right-5 flex font-semibold space-x-2"><img
+                src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
+        </li>
+        <li id="popular-card" class="box-popular grid">
+          <div id="popular-avatar" class="relative text-white" style="width: 371px; height: 291px;">
+            <div class="absolute">
+              <p class="p-4 text-2xl font-bold">Best Seller</p>
+            </div>
+            <div class="p-4 absolute z-20 bottom-0">
+              <div class="flex items-center space-x-2">
+                <span>4.7</span> <img src="./assets/img/icon/stars.png" style="height:fit-content" alt="stars">
+              </div>
+              <p>(161.537)</p>
+            </div>
+            <img class="absolute z-10 bottom-0" src="./assets/img/avatar/avatar-footer.png" alt="avatar-footer">
+            <img src="./assets/img/avatar/oughtea-3.png" alt="oughtea-3">
+          </div>
+          <div id="popular-price" class="relative p-5" style="height: 193px">
+            <p class="font-bold text-black">Qur'an and Hadith studies.</p>
+            <div class="absolute bottom-5 left-5">
+              <p class="text-sm font-medium text-gray mb-3">Dr. ahmad hamid</p>
+              <p class="text-lg font-light text-gray4 line-through">$ 300,00</p>
+              <p class="text-2xl font-bold text-ruby">Fiqh</p>
+            </div>
+            <button class="button-main absolute bottom-5 right-5 flex font-semibold space-x-2"><img
+                src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
+        </li>
+      </ul>
+    </div>
+
     </div>
   </section>
   <!-- quote section -->
-  <section id="quote" class="flex content-center">
-    <div class="container grid md:grid-cols-12 gap-10 content-center text-center lg:text-left">
-      <div class="md:col-start-3 md:col-span-8 lg:col-start-2 lg:col-span-5 grid">
-        <h1>Transform your life through education</h1>
-      </div>
+  <section id="quote" class="bg-cover bg-center grid content-center"
+    style="background-image: url(./assets/img/background/quote.png); height: 621px; max-width: 1440px;">
+    <div class="container text-center">
+      <h1 class="quote text-white">Transform your life through education</h1>
     </div>
   </section>
-  <!-- roadmap section -->
+  <!-- membership section -->
   <section id="membership">
-    <div class="container grid py-28 md:py-32 gap-16">
-      <div class="grid gap-9 lg:gap-5 text-center">
-        <h1>
-          Membership<br />
-          With Meaning
-        </h1>
+    <div class="container grid lg:grid-flow-col grid-cols-12 py-28 md:py-32 gap-16">
+      <div
+        class="grid content-start col-span-12 lg:col-span-6 gap-y-8 lg:gap-y-20 text-left lg:text-right lg:grid-cols-5">
+        <div class="relative lg:col-span-5">
+          <h1 class="text-third">Membership<br />With Meaning</h1>
+          <img class="absolute lg:right-0 mt-2" src="./assets/img/ornament/jret-1.png" alt="jret-1">
+        </div>
+        <h4 class="text-gray5 lg:col-start-2 lg:col-span-4">Our content is filmed with qualified scholars and students
+          of knowledge exclusively at our London studios. </h4>
+        <div class="lg:col-span-5">
+          <button class="button-main text-base lg:text-2xl font-semibold text-white">Learn More</button>
+        </div>
       </div>
+      <img class="lg:order-first col-span-12 lg:col-span-6 lg:-ml-28" style="width: 699px"
+        src="./assets/img/object/membership.png" alt="membership">
     </div>
   </section>
-  <!-- roadmap section -->
-  <section id="deep">
-    <div class="container grid py-28 md:py-32 gap-16">
-      <div class="grid gap-9 lg:gap-5 text-center">
-        <h1>
-          Islamic Courses<br />
-          Deep. Authentic<br />
-          Knowledge
-        </h1>
+  <!-- islamic-courses section -->
+  <section id="islamic-courses" class="bg-maroon z-20 relative">
+    <img class="absolute inset-0 m-auto" src="./assets/img/ornament/ribbon-2-alt.png" alt="ribbon-2">
+    <div class="container relative grid lg:grid-flow-col grid-cols-12 py-28 lg:pt-44 lg:pb-32 gap-16">
+      <div
+        class="grid z-10 content-start col-span-12 lg:col-span-4 gap-y-8 lg:gap-y-20 text-left text-white lg:grid-cols-5">
+        <div class="relative lg:col-span-5">
+          <h1>Islamic Courses<br />Deep. Authentic. Knowledge.</h1>
+          <img class="absolute mt-2" src="./assets/img/ornament/jret-2.png" alt="jret-2">
+        </div>
+        <h4 class="lg:col-span-4">Tired of surfing youtube for Islamic courses ? Find it all in one place ! Start your
+          journey as a student of knowledge today!</h4>
+        <div class="lg:col-span-5">
+          <button class="button-main text-base lg:text-2xl font-semibold">Learn More</button>
+        </div>
       </div>
+      <div class="col-span-12 z-10 lg:col-span-7">
+        <img class="lg:absolute lg:right-0 lg:-mr-28" style="width: 785px" src="./assets/img/object/islamic-courses.png"
+          alt="islamic-courses">
+      </div>
+      <img class="hidden lg:block lg:absolute -bottom-12 left-7" src="./assets/img/ornament/dots.png" alt="dots">
     </div>
   </section>
   <!-- real scholars section -->
   <section id="real-scholars">
-    <div class="container flex flex-col py-28 gap-12">
-      <div class="grid gap-9 lg:gap-5 text-center mx-auto">
-        <h1>
-          Classes Taught<br />
-          By Real Scholars
-        </h1>
+    <div class="container pt-64">
+      <div class="grid lg:grid-flow-col lg:grid-cols-12 gap-9 mx-auto text-third">
+        <div class="relative lg:col-span-4">
+          <h1 class="text-left"> Classes Taught<br />By Real Scholars</h1>
+          <img class="absolute left-0 mt-2" src="./assets/img/ornament/jret-3.png" alt="jret-3">
+        </div>
+        <p class="h4-loose text-left lg:text-right lg:col-start-8 lg:col-span-5">Islamic courses teachers are qualified
+          scholars and students of knowledge. </p>
+      </div>
+      <div class="py-32">
+        <ul class="flex space-x-14 justify-center text-center overflow-x-auto lg:overflow-visible">
+          <a href="#">
+            <li class="box-discover grid">
+              <div class="relative bg-maroon h-240 w-full ">
+                <div class="ruby-circle mx-auto"></div>
+                <img class=" absolute inset-x-0 bottom-0" src="./assets/img/avatar/clipping-1.png" alt="clipping-1">
+              </div>
+              <p class="text-lg font-semibold text-ruby">Self-Confidence</p>
+              <p class="text-sm text-gray3">Zakaria Faris</p>
+            </li>
+          </a>
+          <a href="#">
+            <li class="box-discover grid">
+              <div class="relative bg-maroon h-240 w-full ">
+                <div class="ruby-circle mx-auto"></div>
+                <img class="absolute inset-x-0 bottom-0" src="./assets/img/avatar/clipping-2.png" alt="clipping-2">
+              </div>
+              <p class="text-lg font-semibold text-ruby">Self-Confidence</p>
+              <p class="text-sm text-gray3">Zakaria Faris</p>
+            </li>
+          </a><a href="#">
+            <li class="box-discover grid">
+              <div class="relative bg-maroon h-240 w-full ">
+                <div class="ruby-circle mx-auto"></div>
+                <img class="absolute inset-x-0 bottom-0" src="./assets/img/avatar/clipping-3.png" alt="clipping-3">
+              </div>
+              <p class="text-lg font-semibold text-ruby">Self-Confidence</p>
+              <p class="text-sm text-gray3">Zakaria Faris</p>
+            </li>
+          </a><a href="#">
+            <li class="box-discover grid">
+              <div class="relative bg-maroon h-240 w-full ">
+                <div class="ruby-circle mx-auto"></div>
+                <img class="absolute inset-x-0 bottom-0" src="./assets/img/avatar/clipping-4.png" alt="clipping-4">
+              </div>
+              <p class="text-lg font-semibold text-ruby">Self-Confidence</p>
+              <p class="text-sm text-gray3">Zakaria Faris</p>
+            </li>
+          </a>
+        </ul>
       </div>
     </div>
   </section>
   <!-- app view section -->
   <section id="app-view">
-    <div class="container flex flex-col py-28 gap-12">
-      <div class="grid gap-9 lg:gap-5 text-center mx-auto">
-        <img src="" alt="app-view">
+    <div class="container py-28">
+      <div class="relative box-app-view grid place-content-center">
+        <img class="absolute inset-0" src="./assets/img/ornament/mie.png" alt="mie">
+        <div class="relative z-10 flex items-baseline">
+          <img class="hidden lg:block" src="./assets/img/object/macbook-pro.png" alt="macbook-pro">
+          <img class="lg:-ml-14" src="./assets/img/object/iphone-13.png" alt="iphone-13">
+        </div>
+        <img class="absolute -bottom-11 left-12" src="./assets/img/ornament/dots.png" alt="dots">
+        <img class="absolute -top-11 right-24" src="./assets/img/ornament/dots.png" alt="dots">
       </div>
     </div>
   </section>
-  <!-- founders section -->
-  <section id="app-view">
-    <div class="container flex flex-col py-28 gap-12">
-      <div class="grid gap-9 lg:gap-5 text-center mx-auto">
-        <img src="" alt="founders">
-      </div>
+  <!-- testimonies section -->
+  <section id="testimonies">
+    <div class="container py-32">
+      <ul class="flex justify-center space-x-14  overflow-x-auto lg:overflow-visible">
+        <li class="box-testi grid content-start relative">
+          <img src="./assets/img/avatar/testi-1.png" alt="testi-1">
+          <div class="py-5 px-7">
+            <div class="relative grid gap-3">
+              <p class="text-base font-semibold text-maroon capitalize">"I learned so much about how to become a great
+                coach by ......</p>
+              <p class="text-sm leading-6">Before I knew what coaching is, as a sales who working in a retail company
+                i like to
+                help people. In my life many people </p>
+              <div class="absolute z-10 bottom-0 bg-gradient-to-t from-white w-full h-4/5"></div>
+            </div>
+            <div class="absolute bottom-4">
+              <p class="text-base font-semibold text-ruby capitalize">zahra shihab</p>
+              <p class="text-sm text-gray capitalize">bali, Indonesia</p>
+            </div>
+          </div>
+        </li>
+        <li class="box-testi grid content-start relative">
+          <img src="./assets/img/avatar/testi-2.png" alt="testi-2">
+          <div class="py-5 px-7">
+            <div class="relative grid gap-3">
+              <p class="text-base font-semibold text-maroon capitalize">"I learned so much about how to become a great
+                coach by ......</p>
+              <p class="text-sm leading-6">Before I knew what coaching is, as a sales who working in a retail company
+                i like to
+                help people. In my life many people </p>
+              <div class="absolute z-10 bottom-0 bg-gradient-to-t from-white w-full h-4/5"></div>
+            </div>
+            <div class="absolute bottom-4">
+              <p class="text-base font-semibold text-ruby capitalize">zahra shihab</p>
+              <p class="text-sm text-gray capitalize">bali, Indonesia</p>
+            </div>
+          </div>
+        </li>
+        <li class="box-testi grid content-start relative">
+          <img src="./assets/img/avatar/testi-3.png" alt="testi-3">
+          <div class="py-5 px-7">
+            <div class="relative grid gap-3">
+              <p class="text-base font-semibold text-maroon capitalize">"I learned so much about how to become a great
+                coach by ......</p>
+              <p class="text-sm leading-6">Before I knew what coaching is, as a sales who working in a retail company
+                i like to
+                help people. In my life many people </p>
+              <div class="absolute z-10 bottom-0 bg-gradient-to-t from-white w-full h-4/5"></div>
+            </div>
+            <div class="absolute bottom-4">
+              <p class="text-base font-semibold text-ruby capitalize">zahra shihab</p>
+              <p class="text-sm text-gray capitalize">bali, Indonesia</p>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
   <!-- buttons section -->
   <section id="buttons">
     <div class="container flex flex-col py-28 gap-12">
       <div class="grid gap-9 lg:gap-5 text-center mx-auto">
-        <img src="" alt="founders">
+        <img src="" alt="buttons">
       </div>
     </div>
   </section>
@@ -230,7 +451,7 @@
   <section id="lessons">
     <div class="container flex flex-col py-28 gap-12">
       <div class="grid gap-9 lg:gap-5 text-center mx-auto">
-        <img src="" alt="founders">
+        <img src="" alt="lessons">
       </div>
     </div>
   </section>

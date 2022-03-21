@@ -13,11 +13,6 @@
     margin: auto;
   }
 
-  /* unused */
-  section.inner {
-    min-width: 1440px;
-  }
-
   h1 {
     font-weight: 600;
     font-size: 36px;
@@ -54,9 +49,33 @@
       font-size: 18px;
     }
   }
+
+  h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  @media (min-width: 993px) {
+    h4 {
+      font-size: 24px;
+    }
+  }
 }
 
 @layer components {
+  .h4-loose {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 200%;
+  }
+
+  @media (min-width: 993px) {
+    .h4-loose {
+      font-size: 24px;
+    }
+  }
+
   .inner-section {
     max-width: 1440px;
     margin: auto;
@@ -87,43 +106,51 @@
     border-radius: 10px;
   }
 
-  .border-resume {
-    background: radial-gradient(224.54% 251.03% at 40.62% -86.81%,
-        #768299 0%,
-        rgba(118, 130, 153, 0) 100%);
-    box-shadow: 0px 83px 96px -43px #0a0a1580;
+  .box-discover {
+    width: 270px;
+    height: 326px;
+    box-shadow: 0px 6px 8.210000038146973px 0px #00000017;
+    background: #FFFFFF;
   }
 
-  .round {
-    background: radial-gradient(224.54% 251.03% at 40.62% -86.81%,
-        #768299 0%,
-        rgba(118, 130, 153, 0) 100%);
+  .box-popular {
+    width: 371px;
+    height: 484px;
+    box-shadow: 0px 6px 8.210000038146973px 0px #00000017;
+    background: #FFFFFF;
   }
 
-  .acute {
-    background: radial-gradient(224.54% 251.03% at 40.62% -86.81%,
-        #768299 0%,
-        rgba(118, 130, 153, 0) 100%);
+  .box-testi {
+    width: 371px;
+    height: 523px;
+    box-shadow: 0px 6px 8.210000038146973px 0px #00000017;
   }
 
-  .left {
-    background: linear-gradient(90deg,
-        #232a34 18.62%,
-        rgba(15, 15, 28, 0) 108.81%);
+  .box-app-view {
+    width: 1200px;
+    height: 711px;
+    background: #DFD7C5;
+    border-radius: 14px;
   }
 
-  .right {
-    background: linear-gradient(270deg,
-        #232a34 18.62%,
-        rgba(15, 15, 28, 0) 92.82%);
+  .ruby-circle {
+    height: 180px;
+    width: 180px;
+    background: #CE3252;
+    border-radius: 50%;
+    margin-top: 22px;
   }
 
-  .ln-hg-24 {
-    line-height: 1.5rem;
+  .quote {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 120%;
+    text-shadow: 0px 4px 6px rgba(0,0,0,0.25);
   }
 
-  .ln-hg-28 {
-    line-height: 1.75rem;
+  @media (min-width: 993px) {
+    .quote {
+      font-size: 54px;
+    }
   }
-
 }
