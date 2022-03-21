@@ -181,14 +181,15 @@
   </section>
   <!-- how it works section -->
   <section id="how-it-works">
-    <div class="container flex flex-col pt-16 pb-20 gap-16 lg:gap-8 justify-items-center text-center">
+    <div class="container flex flex-col py-16 gap-16 lg:gap-8 justify-items-center text-center">
       <h1 class="text-maroon">How Islamic Courses Works</h1>
-      <img src="./assets/img/object/how-it-works.png" alt="how-it-works">
+      <img class="hidden xl:block" src="./assets/img/object/how-it-works.png" alt="how-it-works">
+      <img class="xl:hidden" src="./assets/img/object/how-it-works-mobile.png" alt="how-it-works-mobile">
     </div>
   </section>
   <!-- most popular section -->
   <section id="most-popular">
-    <div class="container relative flex flex-col py-28 mt-16 gap-16 lg:gap-8 justify-items-center">
+    <div class="container relative flex flex-col py-28 gap-16 lg:gap-8 justify-items-center">
       <img class="absolute inset-x-0 mx-auto -z-10 hidden lg:block" src="./assets/img/ornament/ribbon-1.svg"
         alt="ribbon-1">
       <h1 class="text-third">Most Popular</h1>
@@ -286,8 +287,7 @@
   <!-- membership section -->
   <section id="membership">
     <div class="container grid lg:grid-flow-col py-24 lg:grid-cols-12 py-28 gap-16">
-      <div
-        class="grid content-start lg:col-span-6 gap-y-8 lg:gap-y-20 text-left lg:text-right lg:grid-cols-5">
+      <div class="grid content-start lg:col-span-6 gap-y-8 lg:gap-y-20 text-left lg:text-right lg:grid-cols-5">
         <div class="relative lg:col-span-5">
           <h1 class="text-third">Membership<br />With Meaning</h1>
           <img class="absolute lg:right-0 mt-2" src="./assets/img/ornament/jret-1.png" alt="jret-1">
@@ -306,8 +306,7 @@
   <section id="islamic-courses" class="bg-maroon z-20 relative">
     <img class="absolute inset-0 m-auto" src="./assets/img/ornament/ribbon-2-alt.png" alt="ribbon-2">
     <div class="container relative grid lg:grid-flow-col lg:grid-cols-12 py-28 lg:pt-44 lg:pb-32 gap-16">
-      <div
-        class="grid z-10 content-start lg:col-span-4 gap-y-8 lg:gap-y-20 text-left text-white lg:grid-cols-5">
+      <div class="grid z-10 content-start lg:col-span-4 gap-y-8 lg:gap-y-20 text-left text-white lg:grid-cols-5">
         <div class="relative lg:col-span-5">
           <h1>Islamic Courses<br />Deep. Authentic. Knowledge.</h1>
           <img class="absolute mt-2" src="./assets/img/ornament/jret-2.png" alt="jret-2">
@@ -319,8 +318,8 @@
         </div>
       </div>
       <div class="col-span-12 z-10 lg:col-span-7">
-        <img class="hidden lg:block lg:absolute lg:right-0 lg:-mr-28 overflow-clip" style="width: 785px" src="./assets/img/object/islamic-courses.png"
-          alt="islamic-courses">
+        <img class="hidden lg:block lg:absolute lg:right-0 lg:-mr-28 overflow-clip" style="width: 785px"
+          src="./assets/img/object/islamic-courses.png" alt="islamic-courses">
       </div>
       <img class="hidden lg:block lg:absolute -bottom-12 left-7" src="./assets/img/ornament/dots.png" alt="dots">
     </div>
@@ -396,8 +395,10 @@
           <img class="hidden lg:block" src="./assets/img/object/macbook-pro.png" alt="macbook-pro">
           <img class="lg:-ml-14 lg:w-195" src="./assets/img/object/iphone-13.png" alt="iphone-13">
         </div>
-        <img class="absolute -bottom-[4.2rem] lg:-bottom-11 -left-1 lg:left-12" src="./assets/img/ornament/dots.png" alt="dots">
-        <img class="absolute -top-[4.2rem] lg:-top-11 -right-1 lg:right-24" src="./assets/img/ornament/dots.png" alt="dots">
+        <img class="absolute -bottom-[4.2rem] lg:-bottom-11 -left-1 lg:left-12" src="./assets/img/ornament/dots.png"
+          alt="dots">
+        <img class="absolute -top-[4.2rem] lg:-top-11 -right-1 lg:right-24" src="./assets/img/ornament/dots.png"
+          alt="dots">
       </div>
     </div>
   </section>
@@ -486,7 +487,8 @@
     <div class="container lg:grid justify-items-center py-28">
       <div
         class="text-base lg:text-2xl text-maroon lg:w-5/6 pt-20 pb-16 gap-8 justify-start lg:justify-center overflow-x-auto lg:overflow-visible">
-        <div class="flex space-x-14 lg:space-x-0 justify-start  overflow-x-auto lg:grid lg:grid-cols-12 lg:gap-12 lg:place-content-center lg:overflow-visible">
+        <div
+          class="flex space-x-14 lg:space-x-0 justify-start  overflow-x-auto lg:grid lg:grid-cols-12 lg:gap-12 lg:place-content-center lg:overflow-visible">
           <div class="grid justify-items-start gap-4 lg:col-span-4">
             <div class="box-lessons bg-gray6 rounded-xl grid place-items-center"><img src="./assets/img/object/fiqh.png"
                 alt="fiqh"></div>
@@ -512,44 +514,64 @@
                 src="./assets/img/object/dawah.png" alt="dawah"></div>
             <p>Dawah</p>
           </div>
+        </div>
+        <div id="slick-butttons" class="flex lg:hidden justify-center space-x-2 mt-12">
+          <button id="active-button" class="w-16 border-4 border-ruby rounded-3xl mx-2"></button>
+          <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+          <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+          <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        </div>
       </div>
-      <div id="slick-butttons" class="flex lg:hidden justify-center space-x-2 mt-12">
-        <button id="active-button" class="w-16 border-4 border-ruby rounded-3xl mx-2"></button>
-        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
-        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
-        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
-      </div>
-    </div>
   </section>
   <!-- footer section -->
-  <footer class="py-20 bg-maroon text-white">
-    <div class="container grid grid-cols-12">
-      <div class="col-span-5 lg:col-span-2">
-        <p class="font-semibold text-lg mb-4">Title</p>
-        <ul class="grid gap-2  text-base">
-          <li><a href="#">sub</a></li>
-          <li><a href="#">sub</a></li>
+  <footer class="pt-20 pb-72 bg-maroon text-white relative grid">
+    <div class="absolute z-20 bg-gradient-to-b from-maroon w-full h-full"></div>
+    <div class="absolute z-10 bg-content bg-center bg-no-repeat w-full h-full" style="background-image: url(./assets/img/ornament/ribbon-footer.png)"></div>
+    <div class="container grid grid-cols-6 gap-y-16 lg:grid-cols-12 z-30">
+      <div class="col-span-3">
+        <p class="font-bold text-lg mb-4">Company</p>
+        <ul class="grid gap-4 font-medium text-lg ">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Partnerships</a></li>
+          <li><a href="#">Blog</a></li>
         </ul>
       </div>
-      <div class="col-span-12 lg:col-span-5">
-        <p class="text-lg font-semibold mr-10">Find Us On</p>
-        <ul class="grid gap-4 tracking-wider text-lg">
-          <li>
-            <a href="#">
-              <img src="assets/img/icon/twitter.svg" alt="twitter" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="assets/img/icon/insta.svg" alt="ig" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="assets/img/icon/YouTube.svg" alt="youtube" />
-            </a>
-          </li>
+      <div class="col-span-3">
+        <p class="font-bold text-lg mb-4">Community</p>
+        <ul class="grid gap-4 font-medium text-lg ">
+          <li><a href="#">Team Plans</a></li>
+          <li><a href="#">Refer a Friend</a></li>
+          <li><a href="#">Limited Membership</a></li>
+          <li><a href="#">Scholarship</a></li>
+          <li><a href="#">Free Classes</a></li>
         </ul>
+      </div>
+      <div class="col-span-3">
+        <p class="font-bold text-lg mb-4">SocialMedia</p>
+        <ul class="grid gap-4 font-medium text-lg ">
+          <a href="#">
+            <li class="flex space-x-3 items-center">
+              <img src="assets/img/icon/twitter.svg" alt="twitter" />
+              <p>Twitter</p>
+            </li>
+          </a>
+          <a href="#">
+            <li class="flex space-x-3 items-center">
+              <img src="assets/img/icon/insta.svg" alt="ig" />
+              <p>Instagram</p>
+            </li>
+          </a>
+          <a href="#">
+            <li class="flex space-x-3 items-center">
+              <img src="assets/img/icon/YouTube.svg" alt="youtube" />
+              <p>Youtube</p>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="col-span-3 text-center lg:text-right grid content-end lg:content-start">
+        <p class="font-bold text-medium">©Islamic Courses</p>
       </div>
     </div>
   </footer>

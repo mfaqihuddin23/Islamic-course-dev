@@ -76,6 +76,10 @@
     }
   }
 
+  .container {
+    width: 90%;
+  }
+
   .inner-section {
     max-width: 1440px;
     margin: auto;
