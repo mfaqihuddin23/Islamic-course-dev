@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css">
   <link href="https://fonts.googleapis.com/css2?family=:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=:wght@400;600&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family:wght@400;500;600;700&family=:wght@400;600&display=swap"
     rel="stylesheet" />
   <link href="assets/css/tailwind.css" rel="stylesheet" />
   <script src="assets/js/lottie.js"></script>
@@ -133,19 +133,19 @@
   </section>
   <!-- discover section -->
   <section id="discover">
-    <div class="lg:container flex flex-col pt-16 pb-20  gap-16 lg:gap-8 justify-items-center text-center">
+    <div class="container flex flex-col pt-16 pb-20  gap-16 lg:gap-8 justify-items-center text-center">
       <h1 class="text-maroon">Discover Deep Knowledge </h1>
-      <ul class="grid grid-flow-col w-full space-x-14 text-center text-gray2 font-bold">
-        <li class="text-black underline decoration-ruby decoration-2 underline-offset-4"><a href="#">All
-            catagories</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Hadith</a></li>
-        <li><a href="#">Al-quran</a></li>
-        <li><a href="#">Art</a></li>
-        <li><a href="#">Poetry</a></li>
-        <li><a href="#">Culture</a></li>
-      </ul>
-      <ul class="flex space-x-14 justify-center overflow-x-auto lg:overflow-visible">
+      <div class="w-full space-x-4 space-y-8 lg:space-x-14 text-center text-gray2">
+        <button id="active-button"
+          class="text-black underline decoration-ruby decoration-2 underline-offset-4 font-bold">All catagories</button>
+        <button id="non-active-button" class="font-bold">History</button>
+        <button id="non-active-button" class="font-bold">Hadith</button>
+        <button id="non-active-button" class="font-bold">Al-Quran</button>
+        <button id="non-active-button" class="font-bold">Art</button>
+        <button id="non-active-button" class="font-bold">Poetry</button>
+        <button id="non-active-button" class="font-bold">Culture</button>
+      </div>
+      <ul class="flex space-x-14 justify-start lg:justify-center overflow-x-auto lg:overflow-visible">
         <a href="#">
           <li class="box-discover grid"><img src="./assets/img/avatar/syaikh-1.png" alt="syaikh-1">
             <p class="text-lg font-semibold text-ruby">Fiqh</p>
@@ -171,6 +171,12 @@
           </li>
         </a>
       </ul>
+      <div id="slick-butttons" class="flex justify-center space-x-2 mt-12">
+        <button id="active-button" class="w-16 border-4 border-ruby rounded-3xl mx-2"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+      </div>
     </div>
   </section>
   <!-- how it works section -->
@@ -182,10 +188,11 @@
   </section>
   <!-- most popular section -->
   <section id="most-popular">
-    <div class="container flex flex-col pt-16 pb-20 gap-16 lg:gap-8 justify-items-center">
-      <img class="absolute inset-x-0 mx-auto -z-10" src="./assets/img/ornament/ribbon-1.svg" alt="ribbon-1">
+    <div class="container relative flex flex-col py-28 mt-16 gap-16 lg:gap-8 justify-items-center">
+      <img class="absolute inset-x-0 mx-auto -z-10 hidden lg:block" src="./assets/img/ornament/ribbon-1.svg"
+        alt="ribbon-1">
       <h1 class="text-third">Most Popular</h1>
-      <ul class="flex space-x-14 justify-center overflow-x-auto lg:overflow-visible">
+      <ul class="flex space-x-14 justify-start lg:justify-center overflow-x-auto lg:overflow-visible">
         <li id="popular-card" class="box-popular grid">
           <div id="popular-avatar" class="relative text-white" style="width: 371px; height: 291px;">
             <div class="absolute">
@@ -207,7 +214,7 @@
               <p class="text-lg font-light text-gray4 line-through">$ 300,00</p>
               <p class="text-2xl font-bold text-ruby">Fiqh</p>
             </div>
-            <button class="button-main absolute bottom-5 right-5 flex font-semibold space-x-2"><img
+            <button class="button-main text-white absolute bottom-5 right-5 flex font-semibold space-x-2"><img
                 src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
         </li>
         <li id="popular-card" class="box-popular grid">
@@ -231,7 +238,7 @@
               <p class="text-lg font-light text-gray4 line-through">$ 300,00</p>
               <p class="text-2xl font-bold text-ruby">Fiqh</p>
             </div>
-            <button class="button-main absolute bottom-5 right-5 flex font-semibold space-x-2"><img
+            <button class="button-main text-white absolute bottom-5 right-5 flex font-semibold space-x-2"><img
                 src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
         </li>
         <li id="popular-card" class="box-popular grid">
@@ -255,16 +262,22 @@
               <p class="text-lg font-light text-gray4 line-through">$ 300,00</p>
               <p class="text-2xl font-bold text-ruby">Fiqh</p>
             </div>
-            <button class="button-main absolute bottom-5 right-5 flex font-semibold space-x-2"><img
+            <button class="button-main text-white absolute bottom-5 right-5 flex font-semibold space-x-2"><img
                 src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
         </li>
       </ul>
+      <div id="slick-butttons" class="flex justify-center space-x-2 mt-12">
+        <button id="active-button" class="w-16 border-4 border-ruby rounded-3xl mx-2"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+      </div>
     </div>
 
     </div>
   </section>
   <!-- quote section -->
-  <section id="quote" class="bg-cover bg-center grid content-center"
+  <section id="quote" class="bg-cover bg-center grid content-center py-16"
     style="background-image: url(./assets/img/background/quote.png); height: 621px; max-width: 1440px;">
     <div class="container text-center">
       <h1 class="quote text-white">Transform your life through education</h1>
@@ -272,9 +285,9 @@
   </section>
   <!-- membership section -->
   <section id="membership">
-    <div class="container grid lg:grid-flow-col grid-cols-12 py-28 md:py-32 gap-16">
+    <div class="container grid lg:grid-flow-col py-24 lg:grid-cols-12 py-28 gap-16">
       <div
-        class="grid content-start col-span-12 lg:col-span-6 gap-y-8 lg:gap-y-20 text-left lg:text-right lg:grid-cols-5">
+        class="grid content-start lg:col-span-6 gap-y-8 lg:gap-y-20 text-left lg:text-right lg:grid-cols-5">
         <div class="relative lg:col-span-5">
           <h1 class="text-third">Membership<br />With Meaning</h1>
           <img class="absolute lg:right-0 mt-2" src="./assets/img/ornament/jret-1.png" alt="jret-1">
@@ -285,16 +298,16 @@
           <button class="button-main text-base lg:text-2xl font-semibold text-white">Learn More</button>
         </div>
       </div>
-      <img class="lg:order-first col-span-12 lg:col-span-6 lg:-ml-28" style="width: 699px"
+      <img class="hidden lg:block lg:order-first col-span-12 lg:col-span-6 lg:-ml-28" style="width: 699px"
         src="./assets/img/object/membership.png" alt="membership">
     </div>
   </section>
   <!-- islamic-courses section -->
   <section id="islamic-courses" class="bg-maroon z-20 relative">
     <img class="absolute inset-0 m-auto" src="./assets/img/ornament/ribbon-2-alt.png" alt="ribbon-2">
-    <div class="container relative grid lg:grid-flow-col grid-cols-12 py-28 lg:pt-44 lg:pb-32 gap-16">
+    <div class="container relative grid lg:grid-flow-col lg:grid-cols-12 py-28 lg:pt-44 lg:pb-32 gap-16">
       <div
-        class="grid z-10 content-start col-span-12 lg:col-span-4 gap-y-8 lg:gap-y-20 text-left text-white lg:grid-cols-5">
+        class="grid z-10 content-start lg:col-span-4 gap-y-8 lg:gap-y-20 text-left text-white lg:grid-cols-5">
         <div class="relative lg:col-span-5">
           <h1>Islamic Courses<br />Deep. Authentic. Knowledge.</h1>
           <img class="absolute mt-2" src="./assets/img/ornament/jret-2.png" alt="jret-2">
@@ -306,7 +319,7 @@
         </div>
       </div>
       <div class="col-span-12 z-10 lg:col-span-7">
-        <img class="lg:absolute lg:right-0 lg:-mr-28" style="width: 785px" src="./assets/img/object/islamic-courses.png"
+        <img class="hidden lg:block lg:absolute lg:right-0 lg:-mr-28 overflow-clip" style="width: 785px" src="./assets/img/object/islamic-courses.png"
           alt="islamic-courses">
       </div>
       <img class="hidden lg:block lg:absolute -bottom-12 left-7" src="./assets/img/ornament/dots.png" alt="dots">
@@ -324,7 +337,7 @@
           scholars and students of knowledge. </p>
       </div>
       <div class="py-32">
-        <ul class="flex space-x-14 justify-center text-center overflow-x-auto lg:overflow-visible">
+        <ul class="flex space-x-14 justify-start lg:justify-center text-center overflow-x-auto lg:overflow-visible">
           <a href="#">
             <li class="box-discover grid">
               <div class="relative bg-maroon h-240 w-full ">
@@ -364,30 +377,37 @@
             </li>
           </a>
         </ul>
+        <div id="slick-butttons" class="flex justify-center space-x-2 mt-12">
+          <button id="active-button" class="w-16 border-4 border-ruby rounded-3xl mx-2"></button>
+          <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+          <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+          <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        </div>
       </div>
     </div>
   </section>
   <!-- app view section -->
   <section id="app-view">
     <div class="container py-28">
-      <div class="relative box-app-view grid place-content-center">
+      <div class="relative box-app-view w-full lg:w-1200 px-6 lg:px-0 grid place-content-center">
+        <!-- NANTI DIREVISI, KAYANYA HARUS PAKE CLIPPING -->
         <img class="absolute inset-0" src="./assets/img/ornament/mie.png" alt="mie">
         <div class="relative z-10 flex items-baseline">
           <img class="hidden lg:block" src="./assets/img/object/macbook-pro.png" alt="macbook-pro">
-          <img class="lg:-ml-14" src="./assets/img/object/iphone-13.png" alt="iphone-13">
+          <img class="lg:-ml-14 lg:w-195" src="./assets/img/object/iphone-13.png" alt="iphone-13">
         </div>
-        <img class="absolute -bottom-11 left-12" src="./assets/img/ornament/dots.png" alt="dots">
-        <img class="absolute -top-11 right-24" src="./assets/img/ornament/dots.png" alt="dots">
+        <img class="absolute -bottom-[4.2rem] lg:-bottom-11 -left-1 lg:left-12" src="./assets/img/ornament/dots.png" alt="dots">
+        <img class="absolute -top-[4.2rem] lg:-top-11 -right-1 lg:right-24" src="./assets/img/ornament/dots.png" alt="dots">
       </div>
     </div>
   </section>
   <!-- testimonies section -->
   <section id="testimonies">
     <div class="container py-32">
-      <ul class="flex justify-center space-x-14  overflow-x-auto lg:overflow-visible">
-        <li class="box-testi grid content-start relative">
+      <ul class="flex space-x-14 justify-start lg:justify-center overflow-x-auto lg:overflow-visible">
+        <li class="box-testi grid">
           <img src="./assets/img/avatar/testi-1.png" alt="testi-1">
-          <div class="py-5 px-7">
+          <div class="relative py-5 px-7">
             <div class="relative grid gap-3">
               <p class="text-base font-semibold text-maroon capitalize">"I learned so much about how to become a great
                 coach by ......</p>
@@ -402,9 +422,9 @@
             </div>
           </div>
         </li>
-        <li class="box-testi grid content-start relative">
+        <li class="box-testi grid">
           <img src="./assets/img/avatar/testi-2.png" alt="testi-2">
-          <div class="py-5 px-7">
+          <div class="relative py-5 px-7">
             <div class="relative grid gap-3">
               <p class="text-base font-semibold text-maroon capitalize">"I learned so much about how to become a great
                 coach by ......</p>
@@ -419,9 +439,9 @@
             </div>
           </div>
         </li>
-        <li class="box-testi grid content-start relative">
+        <li class="box-testi grid">
           <img src="./assets/img/avatar/testi-3.png" alt="testi-3">
-          <div class="py-5 px-7">
+          <div class="relative py-5 px-7">
             <div class="relative grid gap-3">
               <p class="text-base font-semibold text-maroon capitalize">"I learned so much about how to become a great
                 coach by ......</p>
@@ -437,60 +457,83 @@
           </div>
         </li>
       </ul>
+      <div id="slick-butttons" class="flex justify-center space-x-2 mt-12">
+        <button id="active-button" class="w-16 border-4 border-ruby rounded-3xl mx-2"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+      </div>
     </div>
   </section>
   <!-- buttons section -->
-  <section id="buttons">
-    <div class="container flex flex-col py-28 gap-12">
-      <div class="grid gap-9 lg:gap-5 text-center mx-auto">
-        <img src="" alt="buttons">
+  <section id="buttons" class="bg-maroon text-white">
+    <div class="container grid justify-items-center py-32">
+      <div class="space-x-6 space-y-6 lg:space-x-8 lg:space-y-8 text-center text-base lg:text-2xl text-ruby lg:w-2/3">
+        <button class="button-outline py-4 px-6 font-semibold">Quran</button>
+        <button class="button-outline py-4 px-6 font-semibold">Islamic History</button>
+        <button class="button-outline py-4 px-6 font-semibold">Tafsir</button>
+        <button class="button-outline py-4 px-6 font-semibold">Women in Islam</button>
+        <button class="button-outline py-4 px-6 font-semibold">Islamic Finance</button>
+        <button class="button-outline py-4 px-6 font-semibold">Fiqh</button>
+        <button class="button-outline py-4 px-6 font-semibold">Hadits</button>
       </div>
+      <p class="text-2xl text-white mt-16 underline decoration-ruby decoration-4 font-bold underline-offset-4">See more
+      </p>
     </div>
   </section>
   <!-- lessons section -->
   <section id="lessons">
-    <div class="container flex flex-col py-28 gap-12">
-      <div class="grid gap-9 lg:gap-5 text-center mx-auto">
-        <img src="" alt="lessons">
+    <div class="container lg:grid justify-items-center py-28">
+      <div
+        class="text-base lg:text-2xl text-maroon lg:w-5/6 pt-20 pb-16 gap-8 justify-start lg:justify-center overflow-x-auto lg:overflow-visible">
+        <div class="flex space-x-14 lg:space-x-0 justify-start  overflow-x-auto lg:grid lg:grid-cols-12 lg:gap-12 lg:place-content-center lg:overflow-visible">
+          <div class="grid justify-items-start gap-4 lg:col-span-4">
+            <div class="box-lessons bg-gray6 rounded-xl grid place-items-center"><img src="./assets/img/object/fiqh.png"
+                alt="fiqh"></div>
+            <p>Fiqh</p>
+          </div>
+          <div class="grid justify-items-start gap-4 lg:col-span-4">
+            <div class="box-lessons bg-gray6 rounded-xl grid place-items-center"><img
+                src="./assets/img/object/hadeeth.png" alt="hadeeth"></div>
+            <p>Hadeeth</p>
+          </div>
+          <div class="grid justify-items-start gap-4 lg:col-span-4">
+            <div class="box-lessons bg-gray6 rounded-xl grid place-items-center"><img
+                src="./assets/img/object/seerah.png" alt="seerah"></div>
+            <p>Seerah</p>
+          </div>
+          <div class="grid justify-items-start gap-4 lg:col-span-4 lg:col-start-3">
+            <div class="box-lessons bg-gray6 rounded-xl grid place-items-center"><img
+                src="./assets/img/object/tafsir.png" alt="tafsir"></div>
+            <p>Tafsir</p>
+          </div>
+          <div class="grid justify-items-start gap-4 lg:col-span-4">
+            <div class="box-lessons bg-gray6 rounded-xl grid place-items-center"><img
+                src="./assets/img/object/dawah.png" alt="dawah"></div>
+            <p>Dawah</p>
+          </div>
+      </div>
+      <div id="slick-butttons" class="flex lg:hidden justify-center space-x-2 mt-12">
+        <button id="active-button" class="w-16 border-4 border-ruby rounded-3xl mx-2"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
       </div>
     </div>
   </section>
   <!-- footer section -->
   <footer class="py-20 bg-maroon text-white">
-    <div class="container grid grid-cols-12 gap-y-8 lg:gap-y-16">
-      <div class="col-span-12 lg:col-span-5 order-1 flex flex-col mb-10 lg:mb-0 ">
-        <p class="text-xl font-semibold mb-8 lg:mb-4">Islamic Courses</p>
-        <p class="text-sm ln-hg-24 font-normal mb-7">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <div class="col-span-5 lg:col-span-2 order-4 lg:order-2 mb-10 lg:mb-0 grid">
-        <p class="font-semibold inter text-lg mb-4">Title</p>
+    <div class="container grid grid-cols-12">
+      <div class="col-span-5 lg:col-span-2">
+        <p class="font-semibold text-lg mb-4">Title</p>
         <ul class="grid gap-2  text-base">
           <li><a href="#">sub</a></li>
           <li><a href="#">sub</a></li>
         </ul>
       </div>
-      <div class="col-span-5 lg:col-span-2 order-5 lg:order-3 mb-10 lg:mb-0 grid">
-        <p class="font-semibold inter text-lg mb-4">Title</p>
-        <ul class="grid gap-2  text-base">
-          <li><a href="#">GitBook</a></li>
-          <li>
-            <a href="#">Medium</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-span-12 lg:col-span-3 order-6 lg:order-4 flex flex-col">
-        <div>
-          <p class="font-semibold inter text-lg mb-4">Join The Community</p>
-          <ul class=" text-base">
-            <li><a href="#">Join Discord</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-span-12 lg:col-span-5 order-2 lg:order-5 flex items-center lg:mt-3.5">
+      <div class="col-span-12 lg:col-span-5">
         <p class="text-lg font-semibold mr-10">Find Us On</p>
-        <ul class="flex items-center gap-4 tracking-wider text-lg">
+        <ul class="grid gap-4 tracking-wider text-lg">
           <li>
             <a href="#">
               <img src="assets/img/icon/twitter.svg" alt="twitter" />

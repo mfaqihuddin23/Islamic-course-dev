@@ -40,11 +40,18 @@ module.exports = {
         gray3: "#CCD2E3",
         gray4: "#DFDFDF",
         gray5: "#626263",
+        gray6: "#EAE2D563",
+        slickButton: "#CCD2E380",
       },
-      
+
+      width: {
+      '1200': '1200px',
+      '195': '195px'
+      },
+
       height: {
         '240': '240px',
-      }
+      },
     },
   },
   plugins: [
