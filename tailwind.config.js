@@ -41,7 +41,6 @@ module.exports = {
         gray4: "#DFDFDF",
         gray5: "#626263",
         gray6: "#EAE2D563",
-        slickButton: "#CCD2E380",
       },
 
       width: {

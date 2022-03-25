@@ -9,13 +9,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family:wght@400;500;600;700&family=:wght@400;600&display=swap"
-    rel="stylesheet" />
   <link href="assets/css/tailwind.css" rel="stylesheet" />
-  <script src="assets/js/lottie.js"></script>
-  <script src="assets/js/script.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script defer src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"></script>
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-pagination {
+      position: relative;
+      margin-top: 3rem;
+      text-align: center;
+      transition: .3s opacity;
+      transform: translate3d(0, 0, 0);
+      z-index: 10
+    }
+
+    .swiper-pagination-bullet {
+      width: 1.5rem;
+      height: 0.5rem;
+      opacity: 1;
+      background: #CCD2E380;
+      border-radius: 0.5rem;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 64px;
+      background: #CE3252;
+    }
+  </style>
+
 </head>
 
 <body class="jakarta">
@@ -145,7 +170,8 @@
         <button id="non-active-button" class="font-bold">Poetry</button>
         <button id="non-active-button" class="font-bold">Culture</button>
       </div>
-      <ul class="flex space-x-14 justify-start lg:justify-center overflow-x-auto lg:overflow-visible">
+      <ul id="discover-desktop-cards"
+        class="hidden lg:flex space-x-14 justify-start lg:justify-center overflow-x-auto lg:overflow-visible">
         <a href="#">
           <li class="box-discover grid"><img src="./assets/img/avatar/syaikh-1.png" alt="syaikh-1">
             <p class="text-lg font-semibold text-ruby">Fiqh</p>
@@ -171,11 +197,35 @@
           </li>
         </a>
       </ul>
-      <div id="slick-butttons" class="flex justify-center space-x-2 mt-12">
-        <button id="active-button" class="w-16 border-4 border-ruby rounded-3xl mx-2"></button>
-        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
-        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
-        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
+      <div id="discover-mobile-cards" class="block lg:hidden swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box-discover grid">
+              <img src="./assets/img/avatar/syaikh-1.png" alt="syaikh-1">
+              <p class="text-lg font-semibold text-ruby">Fiqh</p>
+              <p class="text-sm text-gray3">Zakaria Faris</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box-discover grid"><img src="./assets/img/avatar/syaikh-2.png" alt="syaikh-2">
+              <p class="text-lg font-semibold text-ruby">Hadith</p>
+              <p class="text-sm text-gray3">Zakaria Faris</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box-discover grid"><img src="./assets/img/avatar/syaikh-3.png" alt="syaikh-3">
+              <p class="text-lg font-semibold text-ruby">Quran</p>
+              <p class="text-sm text-gray3">Zakaria Faris</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box-discover grid"><img src="./assets/img/avatar/syaikh-4.png" alt="syaikh-4">
+              <p class="text-lg font-semibold text-ruby">History</p>
+              <p class="text-sm text-gray3">Zakaria Faris</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination absolute -bottom-10"></div>
       </div>
     </div>
   </section>
@@ -193,7 +243,91 @@
       <img class="absolute inset-x-0 mx-auto -z-10 hidden lg:block" src="./assets/img/ornament/ribbon-1.svg"
         alt="ribbon-1">
       <h1 class="text-third">Most Popular</h1>
-      <ul class="flex space-x-14 justify-start lg:justify-center overflow-x-auto lg:overflow-visible">
+      <div id="most-popular-mobile-cards" class="block lg:hidden swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <li id="popular-card" class="box-popular grid">
+              <div id="popular-avatar" class="relative text-white" style="width: 371px; height: 291px;">
+                <div class="absolute">
+                  <p class="p-4 text-2xl font-bold">Best Seller</p>
+                </div>
+                <div class="p-4 absolute z-20 bottom-0">
+                  <div class="flex items-center space-x-2">
+                    <span>4.7</span> <img src="./assets/img/icon/stars.png" style="height:fit-content" alt="stars">
+                  </div>
+                  <p>(161.537)</p>
+                </div>
+                <img class="absolute z-10 bottom-0" src="./assets/img/avatar/avatar-footer.png" alt="avatar-footer">
+                <img src="./assets/img/avatar/oughtea-1.png" alt="oughtea-1">
+              </div>
+              <div id="popular-price" class="relative p-5" style="height: 193px">
+                <p class="font-bold text-black">Qur'an and Hadith studies.</p>
+                <div class="absolute bottom-5 left-5">
+                  <p class="text-sm font-medium text-gray mb-3">Dr. ahmad hamid</p>
+                  <p class="text-lg font-light text-gray4 line-through">$ 300,00</p>
+                  <p class="text-2xl font-bold text-ruby">Fiqh</p>
+                </div>
+                <button class="button-main text-white absolute bottom-5 right-5 flex font-semibold space-x-2"><img
+                    src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
+            </li>
+          </div>
+          <div class="swiper-slide">
+            <li id="popular-card" class="box-popular grid">
+              <div id="popular-avatar" class="relative text-white" style="width: 371px; height: 291px;">
+                <div class="absolute">
+                  <p class="p-4 text-2xl font-bold">Best Seller</p>
+                </div>
+                <div class="p-4 absolute z-20 bottom-0">
+                  <div class="flex items-center space-x-2">
+                    <span>4.7</span> <img src="./assets/img/icon/stars.png" style="height:fit-content" alt="stars">
+                  </div>
+                  <p>(161.537)</p>
+                </div>
+                <img class="absolute z-10 bottom-0" src="./assets/img/avatar/avatar-footer.png" alt="avatar-footer">
+                <img src="./assets/img/avatar/oughtea-2.png" alt="oughtea-2">
+              </div>
+              <div id="popular-price" class="relative p-5" style="height: 193px">
+                <p class="font-bold text-black">Qur'an and Hadith studies.</p>
+                <div class="absolute bottom-5 left-5">
+                  <p class="text-sm font-medium text-gray mb-3">Dr. ahmad hamid</p>
+                  <p class="text-lg font-light text-gray4 line-through">$ 300,00</p>
+                  <p class="text-2xl font-bold text-ruby">Fiqh</p>
+                </div>
+                <button class="button-main text-white absolute bottom-5 right-5 flex font-semibold space-x-2"><img
+                    src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
+            </li>
+          </div>
+          <div class="swiper-slide">
+            <li id="popular-card" class="box-popular grid">
+              <div id="popular-avatar" class="relative text-white" style="width: 371px; height: 291px;">
+                <div class="absolute">
+                  <p class="p-4 text-2xl font-bold">Best Seller</p>
+                </div>
+                <div class="p-4 absolute z-20 bottom-0">
+                  <div class="flex items-center space-x-2">
+                    <span>4.7</span> <img src="./assets/img/icon/stars.png" style="height:fit-content" alt="stars">
+                  </div>
+                  <p>(161.537)</p>
+                </div>
+                <img class="absolute z-10 bottom-0" src="./assets/img/avatar/avatar-footer.png" alt="avatar-footer">
+                <img src="./assets/img/avatar/oughtea-3.png" alt="oughtea-3">
+              </div>
+              <div id="popular-price" class="relative p-5" style="height: 193px">
+                <p class="font-bold text-black">Qur'an and Hadith studies.</p>
+                <div class="absolute bottom-5 left-5">
+                  <p class="text-sm font-medium text-gray mb-3">Dr. ahmad hamid</p>
+                  <p class="text-lg font-light text-gray4 line-through">$ 300,00</p>
+                  <p class="text-2xl font-bold text-ruby">Fiqh</p>
+                </div>
+                <button class="button-main text-white absolute bottom-5 right-5 flex font-semibold space-x-2"><img
+                    src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
+            </li>
+          </div>
+          <div class="swiper-pagination absolute -bottom-10"></div>
+        </div>
+      </div>
+      <div id="most-popular-desktop-cards" class="swiper-pagination absolute -bottom-10"></div>
+      <ul class="hidden lg:flex space-x-14 justify-start lg:justify-center overflow-x-auto lg:overflow-visible">
         <li id="popular-card" class="box-popular grid">
           <div id="popular-avatar" class="relative text-white" style="width: 371px; height: 291px;">
             <div class="absolute">
@@ -267,15 +401,9 @@
                 src="./assets/img/icon/play-now.svg" alt="play-now"><span>Play Now</span></button>
         </li>
       </ul>
-      <div id="slick-butttons" class="flex justify-center space-x-2 mt-12">
-        <button id="active-button" class="w-16 border-4 border-ruby rounded-3xl mx-2"></button>
-        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
-        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
-        <button id="non-active-button" class="w-6 border-4 border-slickButton rounded-3xl"></button>
-      </div>
+    </div>
     </div>
 
-    </div>
   </section>
   <!-- quote section -->
   <section id="quote" class="bg-cover bg-center grid content-center py-16"
@@ -304,7 +432,7 @@
   </section>
   <!-- islamic-courses section -->
   <section id="islamic-courses" class="bg-maroon z-20 relative">
-    <img class="absolute inset-0 m-auto" src="./assets/img/ornament/ribbon-2-alt.png" alt="ribbon-2">
+    <img class="hidden lg:block absolute inset-0 m-auto" src="./assets/img/ornament/ribbon-2-alt.png" alt="ribbon-2">
     <div class="container relative grid lg:grid-flow-col lg:grid-cols-12 py-28 lg:pt-44 lg:pb-32 gap-16">
       <div class="grid z-10 content-start lg:col-span-4 gap-y-8 lg:gap-y-20 text-left text-white lg:grid-cols-5">
         <div class="relative lg:col-span-5">
@@ -388,10 +516,11 @@
   <!-- app view section -->
   <section id="app-view">
     <div class="container py-28">
+      <!-- Penempatan w-1200 di container ato di bawah sini masalah semua sebenernya buat ukuran tablet -->
       <div class="relative box-app-view w-full lg:w-1200 px-6 lg:px-0 grid place-content-center">
-        <!-- NANTI DIREVISI, KAYANYA HARUS PAKE CLIPPING -->
-        <img class="absolute inset-0" src="./assets/img/ornament/mie.png" alt="mie">
-        <div class="relative z-10 flex items-baseline">
+        <div class="absolute z-10 bg-content bg-center bg-no-repeat w-full h-full"
+          style="background-image: url(./assets/img/ornament/mie.png)"></div>
+        <div class="relative z-20 flex items-baseline">
           <img class="hidden lg:block" src="./assets/img/object/macbook-pro.png" alt="macbook-pro">
           <img class="lg:-ml-14 lg:w-195" src="./assets/img/object/iphone-13.png" alt="iphone-13">
         </div>
@@ -526,7 +655,8 @@
   <!-- footer section -->
   <footer class="pt-20 pb-72 bg-maroon text-white relative grid">
     <div class="absolute z-20 bg-gradient-to-b from-maroon w-full h-full"></div>
-    <div class="absolute z-10 bg-content bg-center bg-no-repeat w-full h-full" style="background-image: url(./assets/img/ornament/ribbon-footer.png)"></div>
+    <div class="absolute z-10 bg-content bg-bottom bg-no-repeat w-full h-full"
+      style="background-image: url(./assets/img/ornament/ribbon-footer.png)"></div>
     <div class="container grid grid-cols-6 gap-y-16 lg:grid-cols-12 z-30">
       <div class="col-span-3">
         <p class="font-bold text-lg mb-4">Company</p>
@@ -575,6 +705,24 @@
       </div>
     </div>
   </footer>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + "</span>";
+        },
+      },
+    });
+  </script>
 </body>
 
 </html>
